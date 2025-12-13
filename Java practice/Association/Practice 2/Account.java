@@ -33,7 +33,7 @@ public class Account {
         return balance;
     }
 
-    public void display() {
+    public void showAccountInfo() {
         System.out.println("Account Holder: " + getAccountHolder());
         System.out.println("Account Number: " + getAccountNum());
         System.out.println("Balance: " + getBalance());
