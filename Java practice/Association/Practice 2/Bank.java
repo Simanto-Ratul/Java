@@ -22,6 +22,7 @@ public class Bank {
         System.out.println("Account Informations: ");
         for (int i = 0; i < count; i++) {
             account[i].showAccountInfo();
+            System.out.println("------------------");
         }
     }
 }
