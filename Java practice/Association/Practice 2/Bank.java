@@ -20,9 +20,10 @@ public class Bank {
     public void showBankInfo() {
         System.out.println("Bank Name: " + bankName);
         System.out.println("Account Informations: ");
+        System.out.println();
         for (int i = 0; i < count; i++) {
             account[i].showAccountInfo();
-            System.out.println("------------------");
+            System.out.println("");
         }
     }
 }
