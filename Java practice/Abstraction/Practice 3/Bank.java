@@ -40,7 +40,7 @@ public abstract class Bank {
         }
     }
 
-    public abstract void  interest();
+    public abstract double interest();
 
     public void display() {
         System.out.println("Account Number: " + getAccountNum());
