@@ -1,9 +1,9 @@
-public class Account {
+public abstract class Account {
     private String accName;
     private String accNum;
     private double balance;
 
-    public Account(String accName, String accNum, double balance){
+    public Account(String accName, String accNum, double balance) {
         this.accName = accName;
         this.accNum = accNum;
         this.balance = balance;
@@ -21,6 +21,6 @@ public class Account {
         return balance;
     }
 
-    
+    public abstract void showDetails();
 
 }
