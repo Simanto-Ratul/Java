@@ -22,14 +22,14 @@ public class JLable1 extends JFrame {
         icon = new ImageIcon(getClass().getResource("bonfire.png"));
         this.setIconImage(icon.getImage());
 
-        c = this.getContentPane();
-        c.setLayout(null);
-        c.setBackground(Color.CYAN);
-
         label = new JLabel();
         label.setText("Enter your name: ");
         label.setVisible(true);
         label.setBounds(100, 100, 150, 50);
+
+        c = this.getContentPane();
+        c.setLayout(null);
+        c.setBackground(Color.CYAN);
         c.add(label);
     }
 
