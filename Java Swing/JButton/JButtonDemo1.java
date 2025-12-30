@@ -4,8 +4,9 @@ import java.awt.*;
 public class JButtonDemo1 extends JFrame {
     private Container c;
     private Color c1;
-    private Font f1;
+    // private Font f1;
     private JButton button1, button2;
+    private ImageIcon imageIcon1, imageIcon2;
 
     public JButtonDemo1() {
         initComponents();
@@ -14,7 +15,9 @@ public class JButtonDemo1 extends JFrame {
     public void initComponents() {
 
         c1 = new Color(15, 12, 91);
-        f1 = new Font("Arial", Font.BOLD, 14);
+        // f1 = new Font("Arial", Font.BOLD, 14);
+        imageIcon1 = new ImageIcon("login.png");
+        imageIcon2 = new ImageIcon("Submit.png");
 
         c = this.getContentPane();
         c.setLayout(null);
@@ -25,18 +28,18 @@ public class JButtonDemo1 extends JFrame {
         this.setBounds(450, 100, 400, 500);
         this.setResizable(false);
 
-        button1 = new JButton("SUBMIT");
+        button1 = new JButton(imageIcon1);
         button1.setBounds(100, 100, 100, 30);
-        button1.setFont(f1);
-        button1.setForeground(Color.WHITE);
-        button1.setBackground(Color.BLACK);
+        // button1.setFont(f1);
+        // button1.setForeground(Color.WHITE);
+        // button1.setBackground(Color.BLACK);
         c.add(button1);
 
-        button2 = new JButton("CONFIRM");
+        button2 = new JButton(imageIcon2);
         button2.setBounds(210, 100, 100, 30);
-        button2.setFont(f1);
-        button2.setForeground(Color.WHITE);
-        button2.setBackground(Color.BLACK);
+        // button2.setFont(f1);
+        // button2.setForeground(Color.WHITE);
+        // button2.setBackground(Color.BLACK);
         c.add(button2);
     }
 
