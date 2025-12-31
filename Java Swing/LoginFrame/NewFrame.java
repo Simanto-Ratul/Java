@@ -18,7 +18,6 @@ public class NewFrame extends JFrame {
         label1 = new JLabel("Hello Everyone!");
         label1.setBounds(50, 50, 150, 50);
         c.add(label1);
-
     }
 
     public static void main(String[] args) {

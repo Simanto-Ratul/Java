@@ -54,6 +54,9 @@ public class LoginFrameDemo extends JFrame {
 
                 if (userName.equals("simanto") && password.equals("12345")) {
                     JOptionPane.showMessageDialog(null, "Succesfully Logined");
+                    dispose();
+                    NewFrame frame = new NewFrame();
+                    frame.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(null, "Invalid username or password.");
                 }
