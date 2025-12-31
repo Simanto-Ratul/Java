@@ -7,8 +7,8 @@ public class NewFrame extends JFrame {
 
     public NewFrame() {
         this.setTitle("New Frame");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(450, 100, 300, 400);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setBounds(450, 100, 400, 400);
         this.setResizable(false);
 
         c = this.getContentPane();
