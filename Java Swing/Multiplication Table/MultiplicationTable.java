@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MultiplicationTable extends JFrame {
     private Container c;
@@ -20,7 +22,7 @@ public class MultiplicationTable extends JFrame {
 
         this.setTitle("Multiplication Table");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(450, 50, 330, 700);
+        this.setBounds(450, 30, 330, 700);
         this.setResizable(false);
         this.setIconImage(imageIcon2.getImage());
 
@@ -43,12 +45,34 @@ public class MultiplicationTable extends JFrame {
         textField1.setFont(f1);
         textField1.setBackground(Color.LIGHT_GRAY);
         textField1.setHorizontalAlignment(JTextField.CENTER);
+        textField1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                textArea1.setText("");
+                int num = Integer.parseInt(textField1.getText());
+
+                for (int i = 1; i <= 10; i++) {
+                    int result = num * i;
+
+                    String r = String.valueOf(result);
+                    String n = String.valueOf(num);
+                    String increment = String.valueOf(i);
+
+                    textArea1.append(n + " x " + increment + " = " + r + "\n");
+                }
+            }
+        });
         c.add(textField1);
 
         button = new JButton("Clear");
         button.setBounds(195, 300, 80, 30);
         button.setFont(f1);
         button.setBackground(Color.LIGHT_GRAY);
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                textField1.setText("");
+                textArea1.setText("");
+            }
+        });
         c.add(button);
 
         textArea1 = new JTextArea();
