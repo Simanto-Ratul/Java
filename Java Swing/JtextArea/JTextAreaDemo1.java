@@ -1,7 +1,4 @@
 import javax.swing.*;
-
-import org.w3c.dom.Text;
-
 import java.awt.*;
 
 public class JTextAreaDemo1 extends JFrame{
