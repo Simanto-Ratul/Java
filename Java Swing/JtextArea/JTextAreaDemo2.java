@@ -19,10 +19,13 @@ public class JTextAreaDemo2 extends JFrame{
         font = new Font("Cambria",Font.BOLD,18);
 
         textArea1 = new JTextArea();
-        textArea1.setBounds(20,30,350,350);
+        textArea1.setBounds(20,30,350,300);
         textArea1.setFont(font);
         textArea1.setForeground(Color.WHITE);
         textArea1.setBackground(Color.DARK_GRAY);
+        textArea1.setLineWrap(true);
+        textArea1.setWrapStyleWord(true);
+        c.add(textArea1);
     }
 
     public static void main(String[] args) {
