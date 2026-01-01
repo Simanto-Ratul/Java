@@ -4,6 +4,7 @@ import java.awt.*;
 public class JRadioButtonDemo1 extends JFrame {
     private Container c;
     private JRadioButton button1, button2;
+    private ButtonGroup buttonGroup;
 
     public JRadioButtonDemo1() {
         this.setTitle("JRadioButton");
@@ -15,6 +16,8 @@ public class JRadioButtonDemo1 extends JFrame {
         c.setLayout(null);
         c.setBackground(Color.ORANGE);
 
+        buttonGroup = new ButtonGroup();
+
         button1 = new JRadioButton("Male");
         button1.setBounds(20, 50, 100, 50);
         button1.setBackground(Color.ORANGE);
@@ -24,6 +27,9 @@ public class JRadioButtonDemo1 extends JFrame {
         button2.setBounds(150, 50, 100, 50);
         button2.setBackground(Color.ORANGE);
         c.add(button2);
+
+        buttonGroup.add(button1);
+        buttonGroup.add(button2);
     }
 
     public static void main(String[] args) {
