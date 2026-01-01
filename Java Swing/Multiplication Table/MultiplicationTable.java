@@ -12,6 +12,7 @@ public class MultiplicationTable extends JFrame {
     private Font f1;
     private ImageIcon imageIcon1, imageIcon2;
     private JButton button;
+    private Cursor cursor;
 
     public MultiplicationTable() {
 
@@ -19,6 +20,7 @@ public class MultiplicationTable extends JFrame {
         f1 = new Font("Cambria", Font.BOLD, 18);
         imageIcon1 = new ImageIcon("photo.jpg");
         imageIcon2 = new ImageIcon("coffee.png");
+        cursor = new Cursor(Cursor.HAND_CURSOR);
 
         this.setTitle("Multiplication Table");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,17 +49,21 @@ public class MultiplicationTable extends JFrame {
         textField1.setHorizontalAlignment(JTextField.CENTER);
         textField1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                textArea1.setText("");
-                int num = Integer.parseInt(textField1.getText());
+                String value = textField1.getText();
+                if (value.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Please, Enter any number!");
+                } else {
+                    textArea1.setText("");
+                    int num = Integer.parseInt(textField1.getText());
+                    for (int i = 1; i <= 10; i++) {
+                        int result = num * i;
 
-                for (int i = 1; i <= 10; i++) {
-                    int result = num * i;
+                        String r = String.valueOf(result);
+                        String n = String.valueOf(num);
+                        String increment = String.valueOf(i);
 
-                    String r = String.valueOf(result);
-                    String n = String.valueOf(num);
-                    String increment = String.valueOf(i);
-
-                    textArea1.append(n + " x " + increment + " = " + r + "\n");
+                        textArea1.append(n + " x " + increment + " = " + r + "\n");
+                    }
                 }
             }
         });
@@ -66,9 +72,10 @@ public class MultiplicationTable extends JFrame {
         button = new JButton("Clear");
         button.setBounds(195, 300, 80, 30);
         button.setFont(f1);
+        button.setCursor(cursor);
         button.setBackground(Color.LIGHT_GRAY);
         button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 textField1.setText("");
                 textArea1.setText("");
             }
