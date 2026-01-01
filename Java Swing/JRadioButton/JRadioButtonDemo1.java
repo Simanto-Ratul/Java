@@ -5,6 +5,7 @@ public class JRadioButtonDemo1 extends JFrame {
     private Container c;
     private JRadioButton button1, button2;
     private ButtonGroup buttonGroup;
+    private Font font;
 
     public JRadioButtonDemo1() {
         this.setTitle("JRadioButton");
@@ -16,16 +17,19 @@ public class JRadioButtonDemo1 extends JFrame {
         c.setLayout(null);
         c.setBackground(Color.ORANGE);
 
+        font = new Font("Cambria",Font.BOLD,16);
         buttonGroup = new ButtonGroup();
 
         button1 = new JRadioButton("Male");
         button1.setBounds(20, 50, 100, 50);
         button1.setBackground(Color.ORANGE);
+        button1.setFont(font);
         c.add(button1);
 
         button2 = new JRadioButton("Female");
         button2.setBounds(150, 50, 100, 50);
         button2.setBackground(Color.ORANGE);
+        button2.setFont(font);
         c.add(button2);
 
         buttonGroup.add(button1);
