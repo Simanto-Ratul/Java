@@ -24,6 +24,7 @@ public class JRadioButtonDemo1 extends JFrame {
         button1.setBounds(20, 50, 100, 50);
         button1.setBackground(Color.ORANGE);
         button1.setFont(font);
+        button1.setSelected(true);
         c.add(button1);
 
         button2 = new JRadioButton("Female");
