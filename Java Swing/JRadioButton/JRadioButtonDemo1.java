@@ -31,6 +31,7 @@ public class JRadioButtonDemo1 extends JFrame {
         button2.setBounds(150, 50, 100, 50);
         button2.setBackground(Color.ORANGE);
         button2.setFont(font);
+        button2.setEnabled(false);
         c.add(button2);
 
         buttonGroup.add(button1);
