@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class JCheckBoxDemo1 extends JFrame {
     private Container c;
@@ -43,13 +45,29 @@ public class JCheckBoxDemo1 extends JFrame {
         group.add(chemistryBox);
         group.add(matCheckBox);
 
-        label = new JLabel("Hii,,");
-        label.setBounds(50,100,150,200);
+        label = new JLabel();
+        label.setBounds(50,100,250,200);
         label.setBackground(Color.CYAN);
         label.setFont(f);
         c.add(label);
+
+        Handler handel = new Handler();
+        physicsBox.addActionListener(handel);
+        chemistryBox.addActionListener(handel);
+        matCheckBox.addActionListener(handel); 
     }
 
+    public class Handler implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            if(physicsBox.isSelected()){
+                label.setText("You have seleceted PHYSICS.");
+            }else if(chemistryBox.isSelected()){
+                label.setText("You have seleted CHEMISTRY.");
+            }else{
+                label.setText("You have selected MATH.");
+            }
+        }
+    }
 
     public static void main(String[] args) {
         JCheckBoxDemo1 d1 = new JCheckBoxDemo1();
