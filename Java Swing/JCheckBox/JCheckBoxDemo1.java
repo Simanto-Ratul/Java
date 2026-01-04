@@ -6,6 +6,7 @@ public class JCheckBoxDemo1 extends JFrame {
     private JCheckBox physicsBox, chemistryBox, matCheckBox;
     private Font f;
     private ButtonGroup group;
+    private JLabel label;
 
     public JCheckBoxDemo1() {
         this.setTitle("JCheckBox");
@@ -26,7 +27,7 @@ public class JCheckBoxDemo1 extends JFrame {
         physicsBox.setBackground(Color.CYAN);
         c.add(physicsBox);
 
-        chemistryBox = new JCheckBox("Chemistry");
+        chemistryBox = new JCheckBox("Chemistry",true);
         chemistryBox.setBounds(130, 50, 100, 50);
         chemistryBox.setFont(f);
         chemistryBox.setBackground(Color.CYAN);
@@ -41,7 +42,14 @@ public class JCheckBoxDemo1 extends JFrame {
         group.add(physicsBox);
         group.add(chemistryBox);
         group.add(matCheckBox);
+
+        label = new JLabel("Hii,,");
+        label.setBounds(50,100,150,200);
+        label.setBackground(Color.CYAN);
+        label.setFont(f);
+        c.add(label);
     }
+
 
     public static void main(String[] args) {
         JCheckBoxDemo1 d1 = new JCheckBoxDemo1();
