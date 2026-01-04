@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+//import java.awt.event.ActionEvent;
 
 public class JCheckBoxDemo1 extends JFrame {
     private Container c;
@@ -52,13 +54,13 @@ public class JCheckBoxDemo1 extends JFrame {
         c.add(label);
 
         Handler handel = new Handler();
-        physicsBox.addActionListener(handel);
-        chemistryBox.addActionListener(handel);
-        matCheckBox.addActionListener(handel); 
+        physicsBox.addItemListener(handel);
+        chemistryBox.addItemListener(handel);
+        matCheckBox.addItemListener(handel);
     }
 
-    public class Handler implements ActionListener{
-        public void actionPerformed(ActionEvent e){
+    public class Handler implements ItemListener{
+        public void itemStateChanged(ItemEvent e){
             if(physicsBox.isSelected()){
                 label.setText("You have seleceted PHYSICS.");
             }else if(chemistryBox.isSelected()){
