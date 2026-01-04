@@ -1,10 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class JComboBoxDemo1 extends JFrame{
     private Container c;
     private JComboBox<String> comboBox;
     private String[] subject = {"PHYSICS", "MATH", "CHEMISTRY", "BIOLOGY"};
+    private JLabel label;
 
     public JComboBoxDemo1(){
         this.setTitle("JComboBox");
@@ -20,6 +22,17 @@ public class JComboBoxDemo1 extends JFrame{
         comboBox.setBounds(50,150,100,30);
         comboBox.setEditable(true);
         c.add(comboBox);
+
+        label = new JLabel();
+        label.setBounds(180,140,200,50);
+        c.add(label);
+
+        comboBox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                String s = comboBox.getSelectedItem().toString();
+                label.setText("You have selected : " + s);
+            }
+        });
     }
 
     public static void main(String[] args) {
