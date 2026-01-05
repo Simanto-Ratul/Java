@@ -46,6 +46,7 @@ public class MultiplicationTable extends JFrame {
         textField1.setBounds(195, 262, 80, 30);
         textField1.setFont(f1);
         textField1.setBackground(Color.LIGHT_GRAY);
+        textField1.setToolTipText("Enter an integer number");
         textField1.setHorizontalAlignment(JTextField.CENTER);
         textField1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
